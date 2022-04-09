@@ -46,9 +46,7 @@
 					</div>
 
 					<div class="col-md-8">
-						<h5 id="h5" class="h5">Search results: <span id="search-result">0</span></h5>
-						<div class="alert alert-info" role="alert">
-							Use the form on the left to search for a movie
+						<div class="alert alert-info movie-alert" role="alert">
 						</div>
 
 						<div id="wrapper" class="wrapper d-flex flex-wrap">
@@ -69,6 +67,25 @@
 		</aside>
 	</main>
 
+	<!-- Modal -->
+	<div class="modal fade movie-modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title movie-modal-heading" id="staticBackdropLabel">Modal title</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body movie-modal-text">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Understood</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<template id="movie_card">
 		<div class="card me-3 mb-3" style="width: 22rem;">
 			<img src="https://i.ytimg.com/vi/4hZi5QaMBFc/mqdefault.jpg" class="card-img-top" style="height: 220px;">
@@ -85,7 +102,7 @@
 				</div>
 				<div class="pb-3">
 					<a class="btn btn-outline-primary btn-sm me-3 card-link" href="" target="_blank  ">Watch trailer</a>
-					<button class="btn btn-outline-info btn-sm me-3">More info</button>
+					<button class="btn btn-outline-info btn-sm me-3 modal-open-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">More info</button>
 					<button class="btn btn-outline-success btn-sm bookmark-btn" >Bookmarks</button>
 				</div>
 			</div>
